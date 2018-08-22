@@ -10,7 +10,7 @@ class IndianNameStemmer(StemmerI):
             i = i[:-3] if i.endswith(['bai', 'ben', 'beg', 'tai', 'sab', 'rao', 'rav', 'sha', 'kha', 'lal']) else i
             i = i[:-4] if i.endswith(['bhai', 'sing']) else i
             i = i[:-5] if i.endswith(['saheb', 'singh' , 'shing']) else i
-            
+     
             for r in (("tha", "ta"), ("i", "e"), ("gi", "ji"), ("bh", "b"), ("v", "w"), ("yu", "u"), ("gh", "g"), 
                       ("dh", "d"), ("sh", "s"), ("gaw", "gaon"), ("gav", "gaon") ):
                 i = i.replace(*r)
