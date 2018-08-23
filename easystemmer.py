@@ -6,7 +6,6 @@ class IndianNameStemmer(StemmerI):
         newtup=list()
         for i in token:
             i = re.sub(r'(\w)\1+',r'\1', i)
-            i = i[:-1]+'v' if i.endswith('o') else i
             i = i[:-2] if i.endswith(('bi', 'ji', 'so')) else i            
             i = i[:-3] if i.endswith(('bai', 'ben', 'beg', 'tai', 'sab', 'rao', 'rav', 'sha', 'kha', 'lal')) else i
             i = i[:-4] if i.endswith(('bhai', 'sing', 'devi')) else i
