@@ -2,6 +2,7 @@ class IndianNameStemmer(StemmerI):
     def stem(self, token):
         newtup = list()
         for i in token:
+            i = i.lower()
             i = re.sub(r'\([^)]*\)', '', i).strip()
             i = re.sub(r'\[[^)]*\]', '', i).strip()
             i = re.sub(r'(^\w{1,3}\. ?)', r'', i)
